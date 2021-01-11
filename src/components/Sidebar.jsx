@@ -1,4 +1,6 @@
 import React from 'react';
+import { Popover } from 'react-bootstrap';
+import { OverlayTrigger } from 'react-bootstrap';
 import {
   AiFillStar,
   AiOutlinePlus,
@@ -7,6 +9,21 @@ import {
 } from 'react-icons/ai';
 import { BiBookContent, BiExit, BiStats } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
+
+const popover1 = (
+  <Popover id='key-1' className='rounded-xl  shadow-sm border-0'>
+    <div className='p-3'>
+      <div className='font-weight-bold'>
+        <span className='im-text-primary mr-1'>1.</span>
+        <span>Let’s Setting Up Your Profile</span>
+      </div>
+      <p className='text-black-50 mt-4 small'>
+        Let’s setting up your profile by uploading a profile picture, and then
+        you are ready to go!
+      </p>
+    </div>
+  </Popover>
+);
 
 export const Sidebar = () => {
   return (
@@ -19,13 +36,16 @@ export const Sidebar = () => {
           >
             <AiOutlinePlus size={20} />
           </button>
-          <button
-            type='button'
-            className='btn btn-two rounded-pill d-flex align-items-center justify-content-center py-0 px-2 bg-white'
-          >
-            <AiFillStar color='#FF8252' />
-            <span className='text-black-50'>4.8</span>
-          </button>
+
+          <OverlayTrigger trigger='click' placement='auto' overlay={popover1}>
+            <button
+              type='button'
+              className='btn btn-two rounded-pill d-flex align-items-center justify-content-center py-0 px-2 bg-white'
+            >
+              <AiFillStar color='#FF8252' />
+              <span className='text-black-50'>4.8</span>
+            </button>
+          </OverlayTrigger>
         </div>
         <div className='font-weight-bold h5'>John Smith</div>
       </header>

@@ -8,6 +8,53 @@ import { FiUsers } from 'react-icons/fi';
 
 import imageOne from '../assets/images/image-1.svg';
 import { Link } from 'react-router-dom';
+import { Popover } from 'react-bootstrap';
+import { OverlayTrigger } from 'react-bootstrap';
+
+const popover1 = (
+  <Popover id='key-1' className='rounded-xl  shadow-sm border-0'>
+    <div className='p-3'>
+      <div className='font-weight-bold'>
+        <span className='im-text-primary mr-1'>1.</span>
+        <span>Let’s Setting Up Your Profile</span>
+      </div>
+      <p className='text-black-50 mt-4 small'>
+        Let’s setting up your profile by uploading a profile picture, and then
+        you are ready to go!
+      </p>
+    </div>
+  </Popover>
+);
+
+const popover3 = (
+  <Popover id='key-3' className='rounded-xl  shadow-sm border-0'>
+    <div className='p-3'>
+      <div className='font-weight-bold'>
+        <span className='im-text-primary mr-1'>3.</span>
+        <span>Create a Public Game!</span>
+      </div>
+      <p className='text-black-50 mt-4 small'>
+        Yes, you can create and publish a public game. Share it to your friends
+        and make it awesome!
+      </p>
+    </div>
+  </Popover>
+);
+
+const popover4 = (
+  <Popover id='key-4' className='rounded-xl  shadow-sm border-0'>
+    <div className='p-3'>
+      <div className='font-weight-bold'>
+        <span className='im-text-primary mr-1'>4.</span>
+        <span>Easy Access Notification</span>
+      </div>
+      <p className='text-black-50 mt-4 small'>
+        The notification tab is easy access and you can see all the new
+        notifications easily here.
+      </p>
+    </div>
+  </Popover>
+);
 
 export const Dashboard = () => {
   const [state, setState] = useState(true);
@@ -341,14 +388,20 @@ export const Dashboard = () => {
               </p>
 
               <div>
-                <Button
-                  block
-                  variant='three'
-                  className='rounded-pill py-3 d-flex justify-content-center align-items-end text-capitalize'
+                <OverlayTrigger
+                  trigger='click'
+                  placement='auto'
+                  overlay={popover3}
                 >
-                  <AiOutlinePlus size={20} className='mr-2' />
-                  <span>Create New Game</span>
-                </Button>
+                  <Button
+                    block
+                    variant='three'
+                    className='rounded-pill py-3 d-flex justify-content-center align-items-end text-capitalize'
+                  >
+                    <AiOutlinePlus size={20} className='mr-2' />
+                    <span>Create New Game</span>
+                  </Button>
+                </OverlayTrigger>
               </div>
             </div>
 
@@ -364,25 +417,31 @@ export const Dashboard = () => {
                 </span>
               </div>
 
-              <div
-                className='small d-flex align-items-baseline'
-                style={{ cursor: 'pointer' }}
-                onClick={() => setState(!state)}
+              <OverlayTrigger
+                trigger='click'
+                placement='auto'
+                overlay={popover4}
               >
-                <span
-                  className='rounded-circle mr-2'
-                  style={{
-                    padding: 3,
-                    backgroundColor: '#ff8252',
-                  }}
-                ></span>
-                <div>
-                  <span>
-                    Welcome to Immin, start exploring some matches now!
-                  </span>
-                  <Link className='im-text-primary ml-1'>Explore Match</Link>
+                <div
+                  className='small d-flex align-items-baseline'
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => setState(!state)}
+                >
+                  <span
+                    className='rounded-circle mr-2'
+                    style={{
+                      padding: 3,
+                      backgroundColor: '#ff8252',
+                    }}
+                  ></span>
+                  <div>
+                    <span>
+                      Welcome to Immin, start exploring some matches now!
+                    </span>
+                    <Link className='im-text-primary ml-1'>Explore Match</Link>
+                  </div>
                 </div>
-              </div>
+              </OverlayTrigger>
 
               {state ? (
                 <div>
@@ -410,13 +469,15 @@ export const Dashboard = () => {
       </div>
 
       {/* === */}
-      <button
-        type='button'
-        className='btn btn-two rounded-pill d-flex align-items-center justify-content-center p-3 fixed-bottom d-lg-none'
-        style={{ bottom: 100, left: 'unset', right: 20 }}
-      >
-        <AiOutlinePlus size={20} />
-      </button>
+      <OverlayTrigger trigger='click' placement='auto' overlay={popover1}>
+        <button
+          type='button'
+          className='btn btn-two rounded-pill d-flex align-items-center justify-content-center p-3 fixed-bottom d-lg-none'
+          style={{ bottom: 100, left: 'unset', right: 20 }}
+        >
+          <AiOutlinePlus size={20} />
+        </button>
+      </OverlayTrigger>
     </main>
   );
 };

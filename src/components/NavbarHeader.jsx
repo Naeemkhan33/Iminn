@@ -1,8 +1,25 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { Popover } from 'react-bootstrap';
+import { OverlayTrigger } from 'react-bootstrap';
 import { Navbar, Button, Form, FormControl } from 'react-bootstrap';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+
+const popover2 = (
+  <Popover id='key-2' className='rounded-xl  shadow-sm border-0'>
+    <div className='p-3'>
+      <div className='font-weight-bold'>
+        <span className='im-text-primary mr-1'>2.</span>
+        <span>Explore Any Games</span>
+      </div>
+      <p className='text-black-50 mt-4 small'>
+        You can search a game using a code that you get from the organizer. Or
+        use the link that has been shared.
+      </p>
+    </div>
+  </Popover>
+);
 
 export const NavbarHeader = () => {
   return (
@@ -47,16 +64,18 @@ export const NavbarHeader = () => {
 
       <Container className='d-none d-lg-flex'>
         <Form inline>
-          <div className='bg-white py-1 px-3 rounded-pill '>
-            <span>
-              <AiOutlineSearch size={23} color='#FF8252' />
-            </span>
-            <FormControl
-              type='text'
-              placeholder='Find game code'
-              className='mr-sm-2 border-0 shadow-none'
-            />
-          </div>
+          <OverlayTrigger trigger='click' placement='auto' overlay={popover2}>
+            <div className='bg-white py-1 px-3 rounded-pill '>
+              <span>
+                <AiOutlineSearch size={23} color='#FF8252' />
+              </span>
+              <FormControl
+                type='text'
+                placeholder='Find game code'
+                className='mr-sm-2 border-0 shadow-none'
+              />
+            </div>
+          </OverlayTrigger>
         </Form>
 
         <div className='ml-auto'>
