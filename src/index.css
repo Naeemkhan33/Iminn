@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -15,6 +15,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* == */
+
+.bg-primary {
+  background-color: #ff8252 !important;
+}
+
+.form-control {
+  border: 2px solid #ff8252;
+  border-radius: 25px;
+}
+
+.btn.focus,
+.btn:focus,
+.form-control:focus {
+  border-color: #ff8252;
+
+  box-shadow: 0 0 0 0.2rem #ff835279;
 }
 
 /* == */
@@ -41,10 +60,17 @@ button:hover {
   background-color: #e1f2f1;
 }
 
-.btn-two {
+.btn-four {
   background-color: rgba(255, 130, 82, 0.1);
   border: 2px solid #ff8252;
   color: #ff8252;
+}
+
+.btn-four.active,
+.btn-four:hover,
+.btn-four:focus {
+  background-color: #ff8252;
+  color: #fff !important;
 }
 
 .btn-three {
@@ -55,6 +81,12 @@ button:hover {
 
 .btn-three:hover {
   color: #fff !important;
+}
+
+.btn-two {
+  background-color: rgba(255, 130, 82, 0.1);
+  border: 2px solid #ff8252;
+  color: #ff8252;
 }
 
 .btn-white {
@@ -140,6 +172,107 @@ button:hover {
 .object-cover {
   object-fit: cover;
   object-position: center;
+}
+
+/* CheckBox */
+
+.form-check {
+  padding: unset;
+}
+
+.form-check-input {
+  position: unset;
+  margin-top: unset;
+  margin-left: unset;
+  margin-right: 1rem;
+}
+
+/* The checkbox-container */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #ccc;
+  border-radius: 0.15rem;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ff8252;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #ff8252;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkbox-container .checkmark:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #ff8252;
+}
+
+/* == */
+
+.calendar-container * {
+  border-radius: 50px;
+  border: 0;
+}
+
+.react-calendar__tile--hasActive,
+.react-calendar__tile--active {
+  background: #ff8252;
+  color: #fff;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #ff8252 !important;
+}
+
+.react-calendar__tile:enabled:hover abbr,
+.react-calendar__tile:enabled:focus abbr {
+  color: #fff;
 }
 
 @media only screen and (max-width: 770px) {

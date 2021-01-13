@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
-import { Col, Row, Button } from 'react-bootstrap';
+import { Col, Row, Button, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+// icons
 import { AiFillHeart, AiOutlinePlus } from 'react-icons/ai';
 import { BiBookOpen, BiTimeFive } from 'react-icons/bi';
-import { GiGamepadCross } from 'react-icons/gi';
+import { Icon1 } from '../assets/images/icon1';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { FiUsers } from 'react-icons/fi';
 
+// images
 import imageOne from '../assets/images/image-1.svg';
-import { Link } from 'react-router-dom';
-import { Popover } from 'react-bootstrap';
-import { OverlayTrigger } from 'react-bootstrap';
+import imageTwo from '../assets/images/image-2.svg';
+import face1 from '../assets/images/face1.svg';
+import face2 from '../assets/images/face2.svg';
+import face3 from '../assets/images/face3.svg';
+import face4 from '../assets/images/face4.svg';
+import face5 from '../assets/images/face5.svg';
 
 const popover1 = (
   <Popover id='key-1' className='rounded-xl  shadow-sm border-0'>
@@ -90,7 +97,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width={30}
                         height={30}
-                        src='https://source.unsplash.com/random'
+                        src={face1}
                         alt=''
                       />
                     </span>
@@ -102,7 +109,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width='93%'
                         height='93%'
-                        src='https://source.unsplash.com/random'
+                        src={face2}
                         alt=''
                       />
                     </span>
@@ -114,7 +121,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width='93%'
                         height='93%'
-                        src='https://source.unsplash.com/random'
+                        src={face3}
                         alt=''
                       />
                     </span>
@@ -126,7 +133,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width='93%'
                         height='93%'
-                        src='https://source.unsplash.com/random'
+                        src={face4}
                         alt=''
                       />
                     </span>
@@ -138,7 +145,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width='93%'
                         height='93%'
-                        src='https://source.unsplash.com/random'
+                        src={face5}
                         alt=''
                       />
                     </span>
@@ -182,7 +189,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width={30}
                         height={30}
-                        src='https://source.unsplash.com/random'
+                        src={face1}
                         alt=''
                       />
                     </span>
@@ -194,7 +201,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width='93%'
                         height='93%'
-                        src='https://source.unsplash.com/random'
+                        src={face2}
                         alt=''
                       />
                     </span>
@@ -206,7 +213,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width='93%'
                         height='93%'
-                        src='https://source.unsplash.com/random'
+                        src={face3}
                         alt=''
                       />
                     </span>
@@ -218,7 +225,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width='93%'
                         height='93%'
-                        src='https://source.unsplash.com/random'
+                        src={face4}
                         alt=''
                       />
                     </span>
@@ -230,7 +237,7 @@ export const Dashboard = () => {
                         className='rounded-circle object-cover'
                         width='93%'
                         height='93%'
-                        src='https://source.unsplash.com/random'
+                        src={face5}
                         alt=''
                       />
                     </span>
@@ -256,7 +263,7 @@ export const Dashboard = () => {
                 </span>
               </div>
               <section className='rounded-xl bg-white p-4 mb-4 position-relative'>
-                <div className='text-right'>
+                <div className='text-right mb-2 mb-md-0'>
                   <Button variant='link' className='p-0'>
                     <AiFillHeart color='#ff8252' size={26} />
                   </Button>
@@ -274,7 +281,7 @@ export const Dashboard = () => {
                       className='rounded-xl object-cover'
                       width='100%'
                       height='100%'
-                      src='https://source.unsplash.com/random'
+                      src={imageTwo}
                       alt=''
                     />
                   </span>
@@ -315,7 +322,7 @@ export const Dashboard = () => {
               </section>
 
               <section className='rounded-xl bg-white p-4 mb-4 position-relative'>
-                <div className='text-right'>
+                <div className='text-right mb-2 mb-md-0'>
                   <Button variant='link' className='p-0'>
                     <AiFillHeart color='#ff8252' size={26} />
                   </Button>
@@ -333,7 +340,7 @@ export const Dashboard = () => {
                       className='rounded-xl object-cover'
                       width='100%'
                       height='100%'
-                      src='https://source.unsplash.com/random'
+                      src={imageTwo}
                       alt=''
                     />
                   </span>
@@ -377,7 +384,7 @@ export const Dashboard = () => {
           <Col lg={4}>
             <div className='rounded-xl bg-white p-4 mb-4'>
               <div className='mb-4 d-flex align-items-center'>
-                <GiGamepadCross color='#ff8252' size={20} className='mr-2' />
+                <Icon1 className='mr-2' />
                 <span className='font-weight-bold text-capitalize'>
                   Create Game
                 </span>
@@ -394,6 +401,8 @@ export const Dashboard = () => {
                   overlay={popover3}
                 >
                   <Button
+                    as={Link}
+                    to='/create-game'
                     block
                     variant='three'
                     className='rounded-pill py-3 d-flex justify-content-center align-items-end text-capitalize'
