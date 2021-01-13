@@ -18,7 +18,7 @@ function App({ location }) {
           </Switch>
         </div>
       </div>
-      <FooterBar />
+      <FooterBar location={location} />
     </>
   );
 }
