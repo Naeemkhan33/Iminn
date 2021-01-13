@@ -19,7 +19,7 @@ const LocationArr = [
 export const CreateGame = () => {
   const [value, onChange] = useState(new Date());
   return (
-    <main className='container-fluid mb-5 pb-5'>
+    <main className='container-fluid mb-5 pb-5 px-0 px-md-3'>
       <form>
         <div className='px-3'>
           <div className='mb-2'>
@@ -89,7 +89,7 @@ export const CreateGame = () => {
                   </Button>
                   <Button
                     variant='four'
-                    className='rounded-pill px-4 border-0 mx-2 mt-2'
+                    className='rounded-pill active px-4 border-0 mx-2 mt-2'
                   >
                     7
                   </Button>
@@ -174,7 +174,7 @@ export const CreateGame = () => {
               <section className='p-2 mb-4 h-100 d-flex flex-column justify-content-around'>
                 <div className='d-flex align-items-baseline'>
                   <span
-                    className='d-flex bg-primary rounded mr-3'
+                    className='d-flex bg-primary rounded-circle mr-3'
                     style={{ padding: 3 }}
                   ></span>
                   <div className='text-black-50 small'>
