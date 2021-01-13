@@ -21,10 +21,10 @@ const popover1 = (
 );
 
 export const FooterBar = ({ location }) => {
-  let hideSidebar = location.pathname === '/create-game';
+  let hideFooterBar = location.pathname === '/create-game';
   return (
     <>
-      {hideSidebar ? (
+      {hideFooterBar ? (
         ''
       ) : (
         <div className='footer-bar p-3 d-block d-lg-none fixed-bottom mt-4'>
