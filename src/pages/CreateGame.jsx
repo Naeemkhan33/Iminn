@@ -21,7 +21,7 @@ export const CreateGame = () => {
   return (
     <main className='container-fluid mb-5 pb-5 px-0 px-md-3'>
       <form>
-        <div className='px-3'>
+        <div className='px-3 px-md-3'>
           <div className='mb-2'>
             <Link to='/' className='p-0'>
               <img height={40} width={40} src={ArrowBack} alt='Back' />
@@ -31,7 +31,7 @@ export const CreateGame = () => {
             <span>
               <Icon1 className='mr-2' />
             </span>
-            <h4 className='font-weight-bold text-black-50 mb-4'>Create Game</h4>
+            <h4 className='font-weight-bold text-dark mb-4 '>Create Game</h4>
           </div>
           <Row>
             <Col>

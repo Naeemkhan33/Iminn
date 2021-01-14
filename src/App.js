@@ -4,6 +4,7 @@ import { NavbarHeader } from './components/NavbarHeader';
 import { Sidebar } from './components/Sidebar';
 import { CreateGame } from './pages/CreateGame';
 import { Dashboard } from './pages/Dashboard';
+import { Profile } from './pages/Profile';
 
 function App({ location }) {
   return (
@@ -15,6 +16,7 @@ function App({ location }) {
           <Switch>
             <Route exact path='/' component={Dashboard} />
             <Route exact path='/create-game' component={CreateGame} />
+            <Route exact path='/profile' component={Profile} />
           </Switch>
         </div>
       </div>

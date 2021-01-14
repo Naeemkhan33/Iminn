@@ -35,12 +35,13 @@ export const Sidebar = ({ location }) => {
         <section className='sidebar d-none d-lg-flex pt-5 mt-4'>
           <header className='p-4 mb-5'>
             <div className='d-flex align-items-center mb-3'>
-              <button
+              <NavLink
+                to='/profile'
                 type='button'
                 className='btn btn-two rounded-pill d-flex align-items-center justify-content-center p-3 mr-3'
               >
                 <AiOutlinePlus size={20} />
-              </button>
+              </NavLink>
 
               <OverlayTrigger
                 trigger='click'
@@ -70,7 +71,7 @@ export const Sidebar = ({ location }) => {
             </NavLink>
 
             <NavLink
-              to='/help'
+              to='/stats'
               className='btn btn-sidebar p-0 w-100 text-left rounded-0 d-flex align-items-center mb-5'
             >
               <span className='mr-3'>
@@ -80,7 +81,7 @@ export const Sidebar = ({ location }) => {
             </NavLink>
 
             <NavLink
-              to='/help'
+              to='/ratings'
               className='btn btn-sidebar p-0 w-100 text-left rounded-0 d-flex align-items-center mb-5'
             >
               <span className='mr-3'>
@@ -90,7 +91,7 @@ export const Sidebar = ({ location }) => {
             </NavLink>
 
             <NavLink
-              to='/help'
+              to='/matches'
               className='btn btn-sidebar p-0 w-100 text-left rounded-0 d-flex align-items-center mb-5'
             >
               <span className='mr-3'>

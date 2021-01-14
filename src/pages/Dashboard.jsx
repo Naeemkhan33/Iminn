@@ -20,7 +20,7 @@ import face5 from '../assets/images/face5.svg';
 
 const popover1 = (
   <Popover id='key-1' className='rounded-xl  shadow-sm border-0'>
-    <div className='p-3'>
+    <div className='py-3 px-3 px-md-3'>
       <div className='font-weight-bold'>
         <span className='im-text-primary mr-1'>1.</span>
         <span>Let’s Setting Up Your Profile</span>
@@ -68,7 +68,7 @@ export const Dashboard = () => {
   return (
     <main className='container mb-5 pb-5'>
       <div className='px-3'>
-        <h4 className='font-weight-bold text-black-50 mb-4'>Games</h4>
+        <h4 className='font-weight-bold text-dark mb-4'>Games</h4>
         <Row>
           <Col>
             <section className='rounded-xl bg-white p-4 mb-4'>
@@ -405,7 +405,7 @@ export const Dashboard = () => {
                     to='/create-game'
                     block
                     variant='three'
-                    className='rounded-pill py-3 d-flex justify-content-center align-items-end text-capitalize'
+                    className='rounded-pill py-3 d-flex justify-content-center align-items-center text-capitalize'
                   >
                     <AiOutlinePlus size={20} className='mr-2' />
                     <span>Create New Game</span>
