@@ -153,6 +153,8 @@ export const Dashboard = () => {
                 </span>
                 <span className='mt-3 mt-md-0 ml-md-auto col-12 col-md-3 col-lg-4 col-xl-3'>
                   <Button
+                    as={Link}
+                    to='/join-game'
                     block
                     variant='three'
                     className='rounded-pill py-3 d-flex justify-content-center align-items-center'
@@ -256,7 +258,7 @@ export const Dashboard = () => {
             </section>
 
             <main>
-              <div className='mb-4'>
+              <div className='mb-4 d-flex'>
                 <BiBookOpen color='#ff8252' size={20} className='mr-2' />
                 <span className='font-weight-bold text-capitalize'>
                   Games Nearby
@@ -270,7 +272,7 @@ export const Dashboard = () => {
                 </div>
                 <div className='row mx-0 justify-content-center align-items-center'>
                   <span
-                    className='mr-md-4 d-flex align-items-center justify-content-center rounded-xl shadow-sm'
+                    className='mr-sm-2 mr-md-4 d-flex align-items-center justify-content-center rounded-xl shadow-sm'
                     style={{
                       width: 220,
                       height: 180,
@@ -285,7 +287,7 @@ export const Dashboard = () => {
                       alt=''
                     />
                   </span>
-                  <div className='text-center mt-3 mt-md-0'>
+                  <div className='text-center text-sm-left mt-3 mt-md-0'>
                     <h5 className='font-weight-bold mb-2'>
                       <span className='text-uppercase'>FCL</span>
                       <span className='mx-1'>vs</span>
@@ -329,7 +331,7 @@ export const Dashboard = () => {
                 </div>
                 <div className='row mx-0 justify-content-center align-items-center'>
                   <span
-                    className='mr-md-4 d-flex align-items-center justify-content-center rounded-xl shadow-sm'
+                    className='mr-sm-2 mr-md-4 d-flex align-items-center justify-content-center rounded-xl shadow-sm'
                     style={{
                       width: 220,
                       height: 180,
@@ -344,7 +346,7 @@ export const Dashboard = () => {
                       alt=''
                     />
                   </span>
-                  <div className='text-center mt-3 mt-md-0'>
+                  <div className='text-center text-sm-left mt-3 mt-md-0'>
                     <h5 className='font-weight-bold mb-2'>
                       <span className='text-uppercase'>FCL</span>
                       <span className='mx-1'>vs</span>

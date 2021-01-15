@@ -48,7 +48,7 @@ export const CreateGame = () => {
                     </label>
                   </div>
                 ))}
-                <div className='border-bottom py-3 mb-2'>
+                <div className='pt-3 mb-2'>
                   <label class='checkbox-container'>
                     <span className='text-black-50'>Other:</span>
                     <input type='radio' name='radio' />

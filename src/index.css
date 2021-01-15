@@ -1,3 +1,19 @@
+:root {
+  --color-primary: #ff8252;
+  --color-primary-light: rgba(255, 130, 82, 0.8);
+  --color-primary-lighter: rgba(255, 130, 82, 0.1);
+  --color-success: #00af9c;
+  --color-success-light: #00af9b;
+  --color-success-lighter: #00af9b55;
+  --color-pink-white: #e1f2f1;
+  --color-white: #fff;
+  --color-white-light: #fafafa;
+  --color-gray: #b8b9bb33;
+  --color-gray-light: #b8b9bb;
+  --color-black: #000;
+  --color-black-lighter: rgba(0, 0, 0, 0.1);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
 
 body {
@@ -25,26 +41,45 @@ code {
 }
 
 .bg-primary {
-  background-color: #ff8252 !important;
+  background-color: var(--color-primary) !important;
 }
 
 .form-control {
-  border: 2px solid #ff8252;
+  border: 2px solid var(--color-primary);
   border-radius: 25px;
 }
 
 .btn.focus,
 .btn:focus,
 .form-control:focus {
-  border-color: #ff8252;
+  border-color: var(--color-primary);
 
-  box-shadow: 0 0 0 0.2rem #ff835279;
+  box-shadow: 0 0 0 0.2rem var(--color-primary-lighter);
 }
 
 /* == */
 
+.bg-gray {
+  background-color: var(--color-gray);
+}
+
 .im-text-primary {
-  color: #ff8252;
+  color: var(--color-primary);
+}
+
+.im-text-success {
+  color: var(--color-success);
+}
+
+.button-send-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.button-send-icon:focus {
+  box-shadow: unset;
+  border: unset;
 }
 
 button {
@@ -56,55 +91,70 @@ button:hover {
   transform: scale(0.97);
   opacity: 0.8;
   transition: all 0.3s ease;
-  color: #ff835298 !important;
+  color: rgba(255, 130, 82, 0.8) !important;
   text-decoration: none !important;
 }
 
 .btn-primary-1 {
-  color: #00af9c;
-  background-color: #e1f2f1;
+  color: var(--color-success);
+  background-color: var(--color-pink-white);
+}
+
+.btn-primary-1:hover {
+  color: var(--color-success) !important;
+}
+
+.btn-primary-1:focus {
+  color: var(--color-success) !important;
+  border-color: var(--color-success-light);
+  box-shadow: 0 0 0.3rem 0.1rem var(--color-success-lighter);
 }
 
 .btn-four {
-  background-color: rgba(255, 130, 82, 0.1);
-  border: 2px solid #ff8252;
-  color: #ff8252;
+  background-color: var(--color-primary-lighter);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .btn-four.active,
 .btn-four:hover,
 .btn-four:focus {
-  background-color: #ff8252;
-  color: #fff !important;
+  background-color: var(--color-primary);
+  color: var(--color-white) !important;
 }
 
 .btn-three {
-  background-color: #ff8252;
-  border: 2px solid #ff8252;
-  color: #fff;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-three:hover {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }
 
 .btn-two {
-  background-color: rgba(255, 130, 82, 0.1);
-  border: 2px solid #ff8252;
-  color: #ff8252;
+  background-color: var(--color-primary-lighter);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .btn-white {
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .bg-light {
-  background-color: #fafafa;
+  background-color: var(--color-dark-light);
 }
 
 .custom-size-one {
   height: 50px;
   width: 120px;
+}
+
+.badge-warning {
+  color: var(--color-primary);
+  background-color: var(--color-primary-lighter);
 }
 
 /* sidebar */
@@ -114,9 +164,9 @@ button:hover {
   flex-direction: column;
   width: 200px;
   height: 90%;
-  background-color: #fff;
-  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1);
-  border-top-right-radius: 2.1rem !important;
+  background-color: var(--color-white);
+  box-shadow: 0 0 0.3rem var(--color-black-lighter);
+  border-top-right-radius: 2.1rem;
 }
 
 .btn-sidebar:focus {
@@ -126,18 +176,18 @@ button:hover {
 
 .btn-sidebar__text,
 .btn-sidebar svg {
-  color: #b8b9bb;
+  color: var(--color-gray-light);
 }
 
 .btn-sidebar:hover .btn-sidebar__text,
 .btn-sidebar.active .btn-sidebar__text {
   font-weight: bold;
-  color: #000;
+  color: var(--color-black);
 }
 
 .btn-sidebar:hover svg,
 .btn-sidebar.active svg {
-  color: #ff8252;
+  color: var(--color-primary);
 }
 
 .btn-sidebar:hover::after,
@@ -148,7 +198,7 @@ button:hover {
 
 .btn-sidebar::after {
   content: '';
-  background-color: #ff8252;
+  background-color: var(--color-primary);
   width: 0;
   height: 32px;
   border-top-left-radius: 0.5rem !important;
@@ -160,14 +210,14 @@ button:hover {
 /* footer-bar */
 
 .footer-bar {
-  background-color: #fff;
-  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+  box-shadow: 0 0 0.3rem var(--color-black-lighter);
   border-top-right-radius: 1.5rem !important;
   border-top-left-radius: 1.5rem !important;
 }
 
 .btn-footer-bar {
-  color: #b8b9bb;
+  color: var(--color-gray-light);
 }
 
 .btn-footer-bar:focus {
@@ -177,7 +227,7 @@ button:hover {
 
 .btn-footer-bar.active,
 .btn-footer-bar:hover {
-  color: #ff8252 !important;
+  color: var(--color-primary) !important;
 }
 
 .rounded-xl {
@@ -228,21 +278,21 @@ button:hover {
   left: 0;
   height: 15px;
   width: 15px;
-  background-color: #fff;
-  box-shadow: 0 0 0 1px #ccc;
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-gray-light);
   border-radius: 0.15rem;
 }
 
 /* On mouse-over, add a grey background color */
 .checkbox-container:hover input ~ .checkmark {
-  background-color: #ff8252;
-  box-shadow: 0 0 0 1px #fff;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-white);
 }
 
 /* When the radio button is checked, add a blue background */
 .checkbox-container input:checked ~ .checkmark {
-  background-color: #fff;
-  box-shadow: 0 0 0 1px #ff8252;
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-primary);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -264,7 +314,7 @@ button:hover {
   transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;
-  background: #ff8252;
+  background: var(--color-primary);
 }
 
 /* == */
@@ -276,18 +326,18 @@ button:hover {
 
 .react-calendar__tile--hasActive,
 .react-calendar__tile--active {
-  background: #ff8252;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
-  background: #ff8252 !important;
+  background: var(--color-primary) !important;
 }
 
 .react-calendar__tile:enabled:hover abbr,
 .react-calendar__tile:enabled:focus abbr {
-  color: #fff;
+  color: var(--color-white);
 }
 
 /* == */
@@ -307,7 +357,7 @@ button:hover {
 .ratings-statistic .bar {
   display: flex;
   position: absolute;
-  background-color: #ff8252;
+  background-color: var(--color-primary);
   height: 100%;
   width: 18px;
   border-top-left-radius: 1.25rem;
@@ -326,8 +376,8 @@ button:hover {
   height: 25px;
   width: 62px;
   z-index: 10;
-  background-color: #fff;
-  box-shadow: 0 0 0 1px orangered;
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-primary-light);
   border-radius: 50px;
   font-size: 13px;
   cursor: pointer;
@@ -335,6 +385,20 @@ button:hover {
 
 .ratings-star-container {
   height: 200px;
+}
+
+.chat-radius-left {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.chat-radius-right {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 0.3rem;
 }
 
 @media only screen and (max-width: 991px) {

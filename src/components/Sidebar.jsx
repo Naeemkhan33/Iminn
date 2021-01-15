@@ -26,7 +26,8 @@ const popover1 = (
 );
 
 export const Sidebar = ({ location }) => {
-  let hideSidebar = location.pathname === '/create-game';
+  let hideSidebar =
+    location.pathname === '/create-game' || location.pathname === '/join-game';
   return (
     <>
       {hideSidebar ? (

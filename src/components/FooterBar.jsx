@@ -4,7 +4,8 @@ import { AiOutlinePlus, AiOutlineStar, AiOutlineWindows } from 'react-icons/ai';
 import { BiBookContent, BiStats } from 'react-icons/bi';
 
 export const FooterBar = ({ location }) => {
-  let hideFooterBar = location.pathname === '/create-game';
+  let hideFooterBar =
+    location.pathname === '/create-game' || location.pathname === '/join-game';
   return (
     <>
       {hideFooterBar ? (
