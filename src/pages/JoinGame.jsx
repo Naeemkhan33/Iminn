@@ -232,7 +232,7 @@ export const JoinGame = () => {
                 type='button'
                 block
                 variant='four'
-                className='rounded-pill py-3 border-0 active mt-3 d-flex align-items-center'
+                className='rounded-pill px-4 py-3 border-0 active mt-3 d-flex align-items-center'
               >
                 <span className='mx-auto font-weight-bold'>Join Game as</span>
                 {toggleOne ? <IoIosArrowUp /> : <IoIosArrowDown />}

@@ -5,6 +5,7 @@ import { Sidebar } from './components/Sidebar';
 import { CreateGame } from './pages/CreateGame';
 import { Dashboard } from './pages/Dashboard';
 import { JoinGame } from './pages/JoinGame';
+import { Matches } from './pages/Matches';
 import { Profile } from './pages/Profile';
 
 function App({ location }) {
@@ -19,6 +20,7 @@ function App({ location }) {
             <Route exact path='/create-game' component={CreateGame} />
             <Route exact path='/profile' component={Profile} />
             <Route exact path='/join-game' component={JoinGame} />
+            <Route exact path='/matches' component={Matches} />
           </Switch>
         </div>
       </div>
