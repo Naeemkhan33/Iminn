@@ -50,7 +50,7 @@ export const OrganizersTable = () => {
                       alt='pic'
                       height={50}
                       width={50}
-                      className='rounded-circle border shadow-sm'
+                      className='object-cover rounded-circle border shadow-sm'
                     />
                   </span>
                 </div>
@@ -83,7 +83,7 @@ export const OrganizersTable = () => {
                 alt='pic'
                 height={50}
                 width={50}
-                className='rounded-circle border shadow-sm'
+                className='object-cover rounded-circle border shadow-sm'
               />
             </span>
             <span className='font-weight-bold'> Mark Otto</span>

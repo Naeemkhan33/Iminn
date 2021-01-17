@@ -57,7 +57,7 @@ export const PlayersTable = () => {
                       alt='pic'
                       height={50}
                       width={50}
-                      className='rounded-circle border shadow-sm'
+                      className='object-cover rounded-circle border shadow-sm'
                     />
                   </span>
                 </div>
@@ -93,7 +93,7 @@ export const PlayersTable = () => {
             </span>
             <span className='mx-3'>
               <img
-                src='https://source.unsplash.com/random'
+                src='object-cover https://source.unsplash.com/random'
                 alt='pic'
                 height={50}
                 width={50}
