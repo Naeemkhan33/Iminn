@@ -60,6 +60,10 @@ code {
   background-color: var(--color-primary) !important;
 }
 
+.bg-primary-lighter {
+  background-color: var(--color-primary-lighter);
+}
+
 .form-control {
   border: 2px solid var(--color-primary);
   border-radius: 25px;
@@ -189,6 +193,10 @@ button:hover {
   color: var(--color-primary);
   background-color: var(--color-primary-lighter);
 }
+.badge-success {
+  color: var(--color-success);
+  background-color: var(--color-success-lighter) !important;
+}
 
 /* sidebar */
 
@@ -265,6 +273,16 @@ button:hover {
 
 .rounded-xl {
   border-radius: 1rem !important;
+}
+
+.rounded-left-xl {
+  border-top-left-radius: 1rem !important;
+  /* border-bottom-left-radius: 1rem !important; */
+}
+
+.rounded-right-xl {
+  border-top-right-radius: 1rem !important;
+  /* border-bottom-right-radius: 1rem !important; */
 }
 
 .object-cover {
