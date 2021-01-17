@@ -93,11 +93,11 @@ export const PlayersTable = () => {
             </span>
             <span className='mx-3'>
               <img
-                src='object-cover https://source.unsplash.com/random'
+                src='https://source.unsplash.com/random'
                 alt='pic'
                 height={50}
                 width={50}
-                className='rounded-circle border shadow-sm'
+                className='rounded-circle border shadow-sm object-cover'
               />
             </span>
             <span className='font-weight-bold'> Mark Otto</span>
