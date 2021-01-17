@@ -1,0 +1,44 @@
+.game-filter-on-small {
+  position: fixed;
+  top: 60px;
+  z-index: 3333333;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+}
+
+.pos-filter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+}
+
+.h-w-20px {
+  height: 20px;
+  width: 20px;
+}
+
+.custom-size-one {
+  height: 50px;
+  width: 120px;
+}
+
+.rounded-xl {
+  border-radius: 1rem !important;
+}
+
+.rounded-left-xl {
+  border-top-left-radius: 1rem !important;
+  /* border-bottom-left-radius: 1rem !important; */
+}
+
+.rounded-right-xl {
+  border-top-right-radius: 1rem !important;
+  /* border-bottom-right-radius: 1rem !important; */
+}
+
+.object-cover {
+  object-fit: cover;
+  object-position: center;
+}
