@@ -29,83 +29,94 @@ const popover2 = (
   </Popover>
 );
 
-export const NavbarHeader = () => {
+export const NavbarHeader = ({ location }) => {
+  let hideNavbarHeader = location.pathname === '/role-select';
   return (
-    <Navbar bg='light'>
-      <Navbar.Brand className='d-none d-lg-flex' as={Link} to='/'>
-        <img src={Logo} alt='Logo' />
-      </Navbar.Brand>
+    <>
+      {hideNavbarHeader ? (
+        ''
+      ) : (
+        <Navbar bg='light'>
+          <Navbar.Brand className='d-none d-lg-flex' as={Link} to='/'>
+            <img src={Logo} alt='Logo' />
+          </Navbar.Brand>
 
-      <Container className='d-none d-lg-flex'>
-        <Form inline>
-          <OverlayTrigger trigger='click' placement='auto' overlay={popover2}>
-            <div className='bg-white py-1 px-3 rounded-pill '>
-              <span>
-                <AiOutlineSearch size={23} color='#FF8252' />
-              </span>
-              <FormControl
-                type='text'
-                placeholder='Find game code'
-                className='mr-sm-2 border-0 shadow-none'
-              />
+          <Container className='d-none d-lg-flex'>
+            <Form inline>
+              <OverlayTrigger
+                trigger='click'
+                placement='auto'
+                overlay={popover2}
+              >
+                <div className='bg-white py-1 px-3 rounded-pill '>
+                  <span>
+                    <AiOutlineSearch size={23} color='#FF8252' />
+                  </span>
+                  <FormControl
+                    type='text'
+                    placeholder='Find game code'
+                    className='mr-sm-2 border-0 shadow-none'
+                  />
+                </div>
+              </OverlayTrigger>
+            </Form>
+
+            <div className='ml-auto'>
+              <Button variant='primary-1' className='rounded-pill mr-4'>
+                <span>
+                  <Icon2 />
+                </span>
+                <span>Legend</span>
+              </Button>
+              <Button variant='white' className='rounded-pill mr-4'>
+                <span>
+                  <Icon3 />
+                </span>
+                <span className='ml-2'>928</span>
+              </Button>
+
+              <Button variant='white' className='rounded-pill mr-4'>
+                <span>
+                  <Icon4 />
+                </span>
+              </Button>
+              <Button variant='white' className='rounded-pill mr-4'>
+                <span>
+                  <Icon5 />
+                </span>
+              </Button>
+
+              <Button variant='white' className='rounded-pill mr-4'>
+                <span>
+                  <Icon6 />
+                </span>
+              </Button>
             </div>
-          </OverlayTrigger>
-        </Form>
+          </Container>
 
-        <div className='ml-auto'>
-          <Button variant='primary-1' className='rounded-pill mr-4'>
-            <span>
-              <Icon2 />
-            </span>
-            <span>Legend</span>
-          </Button>
-          <Button variant='white' className='rounded-pill mr-4'>
-            <span>
-              <Icon3 />
-            </span>
-            <span className='ml-2'>928</span>
-          </Button>
-
-          <Button variant='white' className='rounded-pill mr-4'>
-            <span>
-              <Icon4 />
-            </span>
-          </Button>
-          <Button variant='white' className='rounded-pill mr-4'>
-            <span>
-              <Icon5 />
-            </span>
-          </Button>
-
-          <Button variant='white' className='rounded-pill mr-4'>
-            <span>
-              <Icon6 />
-            </span>
-          </Button>
-        </div>
-      </Container>
-
-      {/* = */}
-      <div className='d-flex align-items-center justify-content-between w-100 d-lg-none'>
-        <div className='font-weight-bold mr-auto'>Games</div>
-        <div>
-          <Button variant='primary-1' className='rounded-pill mr-2'>
-            <span>
-              <Icon2 />
-            </span>
-            <span>Legend</span>
-          </Button>
-          <Button variant='white' className='rounded-pill mr-2'>
-            <span>
-              <Icon3 />
-            </span>
-            <span className='ml-2'>928</span>
-          </Button>
-          <Button variant='link' className='p-0'>
-            <Icon7 />
-          </Button>
-        </div>
-      </div>
-    </Navbar>
+          {/* = */}
+          <div className='d-flex align-items-center justify-content-between w-100 d-lg-none'>
+            <div className='font-weight-bold mr-auto'>Games</div>
+            <div>
+              <Button variant='primary-1' className='rounded-pill mr-2'>
+                <span>
+                  <Icon2 />
+                </span>
+                <span>Legend</span>
+              </Button>
+              <Button variant='white' className='rounded-pill mr-2'>
+                <span>
+                  <Icon3 />
+                </span>
+                <span className='ml-2'>928</span>
+              </Button>
+              <Button variant='link' className='p-0'>
+                <Icon7 />
+              </Button>
+            </div>
+          </div>
+        </Navbar>
+      )}
+    </>
   );
 };

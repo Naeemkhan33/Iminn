@@ -5,7 +5,9 @@ import { BiBookContent, BiStats } from 'react-icons/bi';
 
 export const FooterBar = ({ location }) => {
   let hideFooterBar =
-    location.pathname === '/create-game' || location.pathname === '/join-game';
+    location.pathname === '/role-select' ||
+    location.pathname === '/create-game' ||
+    location.pathname === '/join-game';
   return (
     <>
       {hideFooterBar ? (

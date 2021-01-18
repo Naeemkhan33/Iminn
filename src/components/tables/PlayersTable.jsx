@@ -6,17 +6,17 @@ import { AiFillStar } from 'react-icons/ai';
 import { Icon2 } from '../../assets/images/icon2';
 
 const playersList = [
-  { key: '1' },
-  { key: '2' },
-  { key: '3' },
-  { key: '4' },
-  { key: '5' },
+  { key: '1', pic: require('../../assets/images/face1.svg').default },
+  { key: '2', pic: require('../../assets/images/face2.svg').default },
+  { key: '3', pic: require('../../assets/images/face3.svg').default },
+  { key: '4', pic: require('../../assets/images/face4.svg').default },
+  { key: '5', pic: require('../../assets/images/face5.svg').default },
 ];
 
 export const PlayersTable = () => {
   return (
     <>
-      <Table hover className='shadow-sm rounded-xl small d-none d-md-table'>
+      <Table hover className='shadow-sm rounded-xl small d-none d-lg-table'>
         <thead>
           <tr className='text-capitalize'>
             <th className='border-top-0 bg-primary-lighter rounded-left-xl im-text-primary font-weight-light'></th>
@@ -53,7 +53,7 @@ export const PlayersTable = () => {
                   </span>
                   <span>
                     <img
-                      src='https://source.unsplash.com/random'
+                      src={value.pic}
                       alt='pic'
                       height={50}
                       width={50}
@@ -86,14 +86,14 @@ export const PlayersTable = () => {
         </tbody>
       </Table>
       {playersList.map((value) => (
-        <section className='rounded-xl bg-white p-4 mb-4 d-md-none'>
+        <section className='rounded-xl bg-white p-4 mb-4 d-lg-none'>
           <div>
             <span className='im-text-primary h6 mb-0 font-weight-bold'>
               {value.key}
             </span>
             <span className='mx-3'>
               <img
-                src='https://source.unsplash.com/random'
+                src={value.pic}
                 alt='pic'
                 height={50}
                 width={50}

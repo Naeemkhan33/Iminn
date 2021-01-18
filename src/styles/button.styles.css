@@ -126,6 +126,17 @@ button:hover {
   background-color: var(--color-dark-light);
 }
 
+.btn-link {
+  color: var(--color-primary);
+}
+
+.btn-link.focus,
+.btn-link:focus {
+  text-decoration: unset;
+  border: unset;
+  box-shadow: unset;
+}
+
 .badge-warning {
   color: var(--color-primary);
   background-color: var(--color-primary-lighter);

@@ -27,7 +27,10 @@ const popover1 = (
 
 export const Sidebar = ({ location }) => {
   let hideSidebar =
-    location.pathname === '/create-game' || location.pathname === '/join-game';
+    location.pathname === '/role-select' ||
+    location.pathname === '/create-game' ||
+    location.pathname === '/join-game';
+
   return (
     <>
       {hideSidebar ? (
