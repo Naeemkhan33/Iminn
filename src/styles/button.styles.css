@@ -145,3 +145,7 @@ button:hover {
   color: var(--color-success);
   background-color: var(--color-success-lighter) !important;
 }
+
+.table td {
+  background-color: var(--color-white);
+}
